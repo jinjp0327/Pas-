@@ -8,7 +8,7 @@ chars = "0123456789abcdefghijklmnopqrstuvwxyz"
 def check(text, repeat):
     passwords = product(text, repeat=repeat)
     for i, passwords in enumerate(passwords):
-        print("＼033[32m" + str(i) + ":" + "".join(passwords) + "＼033[0m")
+        print(str(i) + ":" + "".join(passwords))
         if "".join(passwords) == target:
             return "".join(passwords)
 
